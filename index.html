@@ -7,7 +7,6 @@
 </head>
 <body>
 <div><pre class="LaTeX">
-\newcommand{\bbK}{\mathbb {K}}
 \documentclass[12pt]{article}
 %100\%   % test comment removal
 \begin{document}
@@ -146,12 +145,12 @@ Set $r = 1$ in Theorem~\ref{computeTypeOfWRPathOfWRPathSuspension}, then a $\mat
 
 \begin{example}
     Consider the following weighted graph $(\Sigma P_2)_\lambda$: 
-    \[
+        <script type="text/tikz">
         \begin{tikzcd}
             w_1 \ar[d,dash,"5"] & w_2 \ar[d,dash,"3"] & w_3 \ar[d,dash,"4"] \\
             v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3
         \end{tikzcd}
-    \]
+        </script>
     The minimal weighted vertex covers of $(P_2)_\omega = \Bigl(\begin{tikzcd}v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3 \end{tikzcd}\Bigr)$ are displayed in the following sketches:
     \[
         \begin{tikzcd}[every matrix/.append style={name=m},
