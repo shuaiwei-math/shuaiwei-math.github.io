@@ -1,0 +1,292 @@
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[cal=boondox,scr=boondoxo]{mathalfa}
+\setlist[enumerate,1]{label=(\alph*), wide, labelwidth=!, labelindent=0pt}
+\setlist[enumerate,2]{label=(\arabic*), wide, labelwidth=!, labelindent=5pt}
+
+\usepackage{amsthm}
+\usepackage[all]{xy}
+
+\usepackage{undertilde}
+
+\usepackage{array}
+
+\usepackage{listings}
+\usepackage{stmaryrd}
+
+\usepackage{upgreek}
+\usepackage{extarrows}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tipa}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+%\hypersetup{
+%    colorlinks=true,
+%    linkcolor=blue,
+%    filecolor=magenta,      
+%    urlcolor=cyan,
+%}
+%\urlstyle{same}
+\usepackage{pgfplots,pgfplotstable}
+\pgfplotsset{compat=newest}
+\usepackage{xcolor}
+
+\newcommand\ssqcup{\scalebox{1}[.75]{$\sqcup$}}
+
+\newsavebox\MBox
+\newcommand\Cline[2][red]{{\sbox\MBox{$#2$}%
+  \rlap{\usebox\MBox}\color{#1}\rule[-1.2\dp\MBox]{\wd\MBox}{0.5pt}}}
+
+\usepackage{ulem}
+\newcommand\colorwave[1][blue]{\bgroup \markoverwith{\lower3.5\p@\hbox{\sixly \textcolor{#1}{\char58}}}\ULon}
+\font\sixly=lasy6 % does not re-load if already loaded, so no memory problem.
+\normalem % disable underline emphasis.
+
+\newcommand{\biggg}{\bBigg@\thr@@}
+\newcommand{\Biggg}{\bBigg@{4.8}}
+\def\bigggm{\mathrel\biggg}
+\def\Bigggm{\mathrel\Biggg}
+
+\newcommand{\myrightleftarrows}[1]{\mathrel{\substack{\xrightarrow{#1} \\[-.9ex] \xleftarrow{#1}}}}
+
+\def\smallunderbrace#1{\mathop{\vtop{\m@th\ialign{##\crcr
+   $\hfil\displaystyle{#1}\hfil$\crcr
+   \noalign{\kern3\p@\nointerlineskip}%
+   \tiny\upbracefill\crcr\noalign{\kern3\p@}}}}\limits}
+
+\usepackage{arydshln}
+\usepackage{leftidx}
+ 
+\newcommand\llo{
+  \mathchoice
+    {{\scriptstyle\mathcal{O}}}% \displaystyle
+    {{\scriptstyle\mathcal{O}}}% \textstyle
+    {{\scriptscriptstyle\mathcal{O}}}% \scriptstyle
+    {\scalebox{.7}{$\scriptscriptstyle\mathcal{O}$}}%\scriptscriptstyle
+}
+
+\newcommand{\bsb}{\boldsymbol {b}}
+\newcommand{\bsx}{\boldsymbol {x}}
+
+\usepackage[symbol]{footmisc}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\overbar}[1]{\mkern 1.0mu\overline{\mkern-1.0mu#1\mkern-1.0mu}\mkern 1.0mu}
+
+\newcommand{\bfM}{\mathbf{M}}
+
+\newcommand{\llL}{\mathcal{L}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\llR}{\mathcal{R}}
+\newcommand{\llA}{\mathcal{A}}
+\newcommand{\ssA}{\mathscr{A}}
+\newcommand{\llB}{\mathcal{B}}
+\newcommand{\ssB}{\mathscr{B}}
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\llG}{\mathcal{G}}
+\newcommand{\llC}{\mathcal{C}}
+\newcommand{\ssC}{\mathscr{C}}
+\newcommand{\llD}{\mathcal{D}}
+\newcommand{\ssD}{\mathscr{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\llE}{\mathcal{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\llF}{\mathcal{F}}
+\newcommand{\ssF}{\mathscr{F}}
+\newcommand{\ssG}{\mathscr{G}}
+\newcommand{\llH}{\mathcal{H}}
+\newcommand{\llI}{\mathcal{I}}
+\newcommand{\llJ}{\mathcal{J}}
+\newcommand{\llK}{\mathcal{K}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\llM}{\mathcal{M}}
+\newcommand{\llN}{\mathcal{N}}
+\newcommand{\llO}{\mathcal{O}}
+\newcommand{\ssO}{\mathscr{O}}
+\newcommand{\llP}{\mathcal{P}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\ssP}{\mathscr{P}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\llT}{\mathcal{T}}
+\newcommand{\ssT}{\mathscr{T}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\llS}{\mathcal{S}}
+\newcommand{\ssS}{\mathscr{S}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\ssV}{\mathscr{V}}
+\newcommand{\llV}{\mathcal{V}}
+\newcommand{\llU}{\mathcal{U}}
+\newcommand{\ssY}{\mathscr{Y}}
+\newcommand{\llZ}{\mathcal{Z}}
+\newcommand{\ssZ}{\mathscr{Z}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\ba}{\mathbf{a}}
+
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\ffF}{\mathfrak{F}}
+\newcommand{\ffJ}{\mathfrak{J}}
+\newcommand{\ffP}{\mathfrak{P}}
+\newcommand{\ffN}{\mathfrak{N}}
+
+\newcommand{\ffa}{\mathfrak{a}}
+\newcommand{\ffb}{\mathfrak{b}}
+\newcommand{\ffc}{\mathfrak{c}}
+\newcommand{\ffg}{\mathfrak{g}}
+\newcommand{\ffh}{\mathfrak{h}}
+\newcommand{\ffk}{\mathfrak{k}}
+\newcommand{\ffl}{\mathfrak{l}}
+\newcommand{\ffm}{\mathfrak{m}}
+\newcommand{\ffn}{\mathfrak{n}}
+\newcommand{\ffp}{\mathfrak{p}}
+\newcommand{\ffq}{\mathfrak{q}}
+\newcommand{\ffr}{\mathfrak{r}}
+\newcommand{\ffs}{\mathfrak{s}}
+\newcommand{\ffu}{\mathfrak{u}}
+\newcommand{\ffX}{\mathfrak{X}}
+\newcommand{\Hom}{\operatorname{Hom}}
+%\newcommand{\Hom}[3][R]{\operatorname{Hom}_{#1}(#2,#3)}	
+\renewcommand{\ker}{\operatorname{Ker}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\xra}{\xrightarrow}
+\newcommand{\wti}{\widetilde}
+\newcommand{\coker}{\operatorname{Coker}}
+\newcommand{\fa}{\ \forall \ }
+\newcommand{\fz}{\ \forall \ n\in \mathbb {Z}^{\geq 0} }
+\newcommand {\Pa} {\ P\text{-a.s.}}
+\newcommand{\ex}{\exists \ }
+
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\supp}{\operatorname{Supp}}
+\newcommand{\ass}{\operatorname{Ass}}
+\newcommand{\ann}{\operatorname{Ann}}
+
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+\theoremstyle{plain}
+
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{intthm}{Theorem}
+\renewcommand{\theintthm}{\Alph{intthm}}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{example*}{Example}
+ 
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem*{warning*}{Warning}
+\newtheorem{recall}[theorem]{Recall}
+\newtheorem*{recall*}{Recall}
+\newtheorem*{fact*}{Fact}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{questions}{Questions}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{disc}{Remark}
+\newtheorem*{remark}{Remark}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{discussion}[theorem]{Discussion}
+\newtheorem*{discussion*}{Discussion}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem*{notation*}{Notation}
+\newtheorem{note}[theorem]{Note}
+\newtheorem*{note*}{Note}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem*{conjecture*}{Conjecture}
+\newtheorem{para}{}
+\newtheorem{exer}[theorem]{Exercise}
+\newtheorem*{exer*}{Exercise}
+\newtheorem{remarkdefinition}{Remark/Definition}
+\newtheorem{step}{Step}
+\newtheorem{convention}[theorem]{Convention}
+\newtheorem*{convention*}{Convention}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem*{assumption*}{Assumption}
+
+\newtheorem{innercustomgeneric}{\customgenericname}
+\providecommand{\customgenericname}{}
+\newcommand{\newcustomtheorem}[2]{%
+  \newenvironment{#1}[1]
+  {%
+   \renewcommand\customgenericname{#2}%
+   \renewcommand\theinnercustomgeneric{##1}%
+   \innercustomgeneric
+  }
+  {\endinnercustomgeneric}
+}
+
+\newcustomtheorem{customthm}{Theorem}
+\newcustomtheorem{customfact}{Fact}
+\newcustomtheorem{customlemma}{Lemma}
+\newcustomtheorem{customdefinition}{Definition}
+\newcustomtheorem{customrecall}{Recall}
+
+\newcommand{\fmn}{F^{m\times n}}
+\newcommand{\fnn}{F^{n\times n}}
+\newcommand{\col}{\operatorname{Col}}
+\newcommand{\row}{\operatorname{Row}}
+\newcommand{\Span}{\operatorname{Span}}	
+\newcommand{\rank}{\operatorname{rank}}	
+\newcommand{\OO}[1]{\mathcal{O}_{#1}}
+\newcommand{\Ext}[4][R]{\operatorname{Ext}_{#1}^{#2}(#3,#4)}	
+\newcommand{\depth}{\operatorname{depth}}
+
+\numberwithin{equation}{theorem}
+
+\usepackage{mdframed}
+\newenvironment{aside}
+  {\begin{mdframed}[style=0,%
+      leftline=false,rightline=false,leftmargin=2em,rightmargin=2em,%
+          innerleftmargin=0pt,innerrightmargin=0pt,linewidth=0.75pt,%
+      skipabove=7pt,skipbelow=7pt]\small}
+  {\end{mdframed}}
+
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathrsfs} % https://www.ctan.org/pkg/mathrsfs
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+\usepackage{cancel}
+
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphs.standard}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{tikz-cd}
+\usetikzlibrary{intersections}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\newcommand{\longsquiggly}{\xymatrix{{}\ar@{~>}[r]&{}}}
+
