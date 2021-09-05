@@ -85,7 +85,7 @@ Just like that we have an equality for edge ideal $I(G)$ of the graph $G$ and St
     We say that $(V',\delta')$ with $V' \subseteq V$ and $\delta': V' \to \bbN$ is a \emph{weighted independence} set in $G_\omega$ if for any $v_i,v_j \in V'$, either $v_iv_j \not \in E$ or $\min\{\delta'(v_i),\delta'(v_j)\} < \omega(v_iv_j)$. Let $\Upsilon_\omega$ denote the set of weighted independence sets $(V',\delta')$ in $G_\omega$. This is the \emph{weighted independence complex} of $G_\omega$.
 \end{definition}
 
-\begin{definition}
+        \begin{definition} \href{https://www.ndsu.edu/pubweb/~ssatherw/DOCS/paulsen-eiwg.pdf}{EDGE IDEALS OF WEIGHTED GRAPHS}
     A \emph{weighted vertex cover} of $G_\omega$ with respect to $\bfM$ is a weighted vertex cover $(V',\delta')$ such that $m_i \leq \delta'(v_i) \leq M_i$ for any $v_i \in V'$. Let $\llV_\omega^\bfM$ be the set of weighted vertex cover of $G_\omega$ with respect to $\bfM$.
 \end{definition}
 
@@ -124,15 +124,13 @@ Just like that we have an equality for edge ideal $I(G)$ of the graph $G$ and St
     where for $i = 1,\dots,n$: $\delta_i''(v_j) = M_j + m_i - \delta_i'(v_j)$ for any $v_j \in V_i'$.
 \end{definition}
 
-If $m_i = 1$ for $i = 1,\dots,d$, then the definition is consistent with the one from \emph{Alexander Duality for Monomial Ideals and Their Resolutions} by Ezra Miller.
+If $m_i = 1$ for $i = 1,\dots,d$, then the definition is consistent with the one from \href{https://rejecta.github.io/mathematica/files/articles/RMv1n1-Miller.pdf}{Alexander Duality for Monomial Ideals and Their Resolutions} by Ezra Miller.
 
 \begin{theorem}
     \[(J_{\Upsilon^\bfM})^\vee = J_{(\Upsilon^\bfM)^\vee}.\]
 \end{theorem}
 
-\begin{center}
-    \textsl{1. Cohen-Macaulay type of weighted edge ideals}
-\end{center}
+\section{Cohen-Macaulay type of weighted edge ideals}
 
 One of my main research goals is to compute combinatorially the (finite) dimension of $\bbK$-vector space $\operatorname{Ext}_R^{n}(\bbK,R/I)$ with $n := \operatorname{depth}_R(R/I)$, where $I$ comes from edge-weighted graphs as a monomial ideal in $R$. Regard $R/I$ as a \emph{graded $R$-module} with natural grading, then $R/I$ behaves like a \emph{local ring} with the unique \emph{maximal homogeneous ideal} $\ffX/I$ where $\ffX = (X_1,\dots,X_d)R$. From now on all algebraic objects and morphisms will be homogeneous or graded by default. In this setting the $R$-module $\operatorname{Ext}_R^n(\bbK,R/I)$ is also called the \emph{type} of $R/I$, denoted by
     \[\operatorname{r}_R(R/I) = \dim_\bbK(\operatorname{Ext}_R^n(\bbK,R/I)).\]
@@ -155,9 +153,7 @@ Set $r = 1$ in Theorem~0.1, then a $\mathcal p$-minimal weighted 1-path vertex c
     \[\operatorname{r}_{R'}\biggl(\frac{R'}{I((\Sigma G)_\lambda)}\biggr) = \sharp\, \{\text{minimal weighted vertex covers of }G_\omega\}.\]
 \end{corollary}
 
-\begin{center}
-    \textsl{2. Cohen-Macaulay edge-weighted chordal graphs classifying}
-\end{center}
+\section{Cohen-Macaulay edge-weighted chordal graphs classifying}
 
 Finally, I classified all Cohen-Macaulay edge-weighted chordal graphs following the classification of all Cohen-Macaulay chordal graphs by J\"urgen. The characterization is purely graph-theoretical, and it turns out that for weighted chordal graphs the Cohen-Macaulay property is independent of the field $\bbK$.
 
