@@ -7,13 +7,12 @@
 </head>
 <body>
 <div><pre class="LaTeX">
-MathJax.Hub.Config({
-  TeX: {
-    Macros: {
-      bbR: "{\\mathbb R}",
-    }
-  }
-});
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {Macros: {bbR: "{\\mathbb R}",}
+      }
+    });
+</script>
 \documentclass[12pt]{article}
 %100\%   % test comment removal
 \usepackage{setting}
