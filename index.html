@@ -132,13 +132,9 @@ Just like that we have an equality for edge ideal $I(G)$ of the graph $G$ and St
     \[(J_{\Upsilon^\bfM})^\vee = J_{(\Upsilon^\bfM)^\vee}.\]
 \end{theorem}
 
-\vspace{0.3cm}
-
 \begin{center}
     \textsl{\large 1. Cohen-Macaulay type of weighted edge ideals}
 \end{center}
-
-\vspace{0.1cm}
 
 One of my main research goals is to compute combinatorially the (finite) dimension of $\bbK$-vector space $\operatorname{Ext}_R^{n}(\bbK,R/I)$ with $n := \operatorname{depth}_R(R/I)$, where $I$ comes from edge-weighted graphs as a monomial ideal in $R$. Regard $R/I$ as a \emph{graded $R$-module} with natural grading, then $R/I$ behaves like a \emph{local ring} with the unique \emph{maximal homogeneous ideal} $\ffX/I$ where $\ffX = (X_1,\dots,X_d)R$. From now on all algebraic objects and morphisms will be homogeneous or graded by default. In this setting the $R$-module $\operatorname{Ext}_R^n(\bbK,R/I)$ is also called the \emph{type} of $R/I$, denoted by
     \[\operatorname{r}_R(R/I) = \dim_\bbK(\operatorname{Ext}_R^n(\bbK,R/I)).\]
@@ -161,50 +157,9 @@ Set $r = 1$ in Theorem~\ref{computeTypeOfWRPathOfWRPathSuspension}, then a $\mat
     \[\operatorname{r}_{R'}\biggl(\frac{R'}{I((\Sigma G)_\lambda)}\biggr) = \sharp\, \{\text{minimal weighted vertex covers of }G_\omega\}.\]
 \end{corollary}
 
-\begin{example}
-    Consider the following weighted graph $(\Sigma P_2)_\lambda$: 
-    \[
-        \begin{tikzcd}
-            w_1 \ar[d,dash,"5"] & w_2 \ar[d,dash,"3"] & w_3 \ar[d,dash,"4"] \\
-            v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3
-        \end{tikzcd}
-    \]
-    The minimal weighted vertex covers of $(P_2)_\omega = \Bigl(\begin{tikzcd}v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3 \end{tikzcd}\Bigr)$ are displayed in the following sketches:
-    \[
-        \begin{tikzcd}[every matrix/.append style={name=m},
-          execute at end picture={
-              \draw [<-] (m-1-2) ellipse(0.3cm and 0.25cm);
-          }]
-          v_1 \ar[r,dash,"2"] & v_2^2 \ar[r,dash,"3"] & v_3
-        \end{tikzcd} \ \ \ \ \ \ 
-        \begin{tikzcd}[every matrix/.append style={name=m},
-          execute at end picture={
-              \draw [<-] (m-1-1) ellipse(0.3cm and 0.25cm);
-              \draw [<-] (m-1-2) ellipse(0.3cm and 0.25cm);
-          }]
-          v_1^2 \ar[r,dash,"2"] & v_2^3 \ar[r,dash,"3"] & v_3
-        \end{tikzcd} \ \ \ \ \ \ 
-        \begin{tikzcd}[every matrix/.append style={name=m},
-          execute at end picture={
-              \draw [<-] (m-1-1) ellipse(0.3cm and 0.25cm);
-              \draw [<-] (m-1-3) ellipse(0.3cm and 0.25cm);
-          }]
-          v_1^2 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3^3
-        \end{tikzcd}
-    \]
-    Then by Theorem~\ref{weightedCMTypeEqualToMinWVCTheorem},     
-    \[\operatorname{r}_{R'}\bigl(R'/I((\Sigma P_2)_\lambda)\bigr) = \sharp\, \{\text{minimal weighted vertex covers of }(P_2)_\omega\} = 3.\]
-    Since $R'/I((\Sigma P_2)_\lambda)$ is Cohen-Macaulay by~\cite[Theorem 5.7]{MR3055580} and every minimal weighted vertex cover of $(\Sigma P_2)_\lambda$ has cardinality 3, we have $\operatorname{depth}(R'/I((\Sigma P_2)_\lambda)) = \dim\bigl(R'/I((\Sigma P_2)_\lambda)\bigr) = 6 - 3$. So
-    \[\operatorname{Ext}_{R'}^3\bigl(\bbK,R'/I((\Sigma P_2)_\lambda)\bigr) \cong \bbK^3.\]
-\end{example}
-
-\vspace{0.3cm}
-
 \begin{center}
     \textsl{\large 2. Cohen-Macaulay edge-weighted chordal graphs classifying}
 \end{center}
-
-\vspace{0.1cm}
 
 Finally, I classified all Cohen-Macaulay edge-weighted chordal graphs following the classification of all Cohen-Macaulay chordal graphs by J\"urgen\cite{MR2231097}. The characterization is purely graph-theoretical, and it turns out that for weighted chordal graphs the Cohen-Macaulay property is independent of the field $\bbK$.
 
