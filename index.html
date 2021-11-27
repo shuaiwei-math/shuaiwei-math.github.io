@@ -24,181 +24,227 @@
       }
     });
 </script>
-\documentclass[12pt]{article}
-%100\%   % test comment removal
+
+\documentclass{article} 
 \usepackage{setting}
 \begin{document}
 
-\title{Research Statement}
-\author{Shuai Wei1}
-\address{Clemson University}
-\date{Version: Nov 28, 2021}
+\title{Research Statement} 
+\author{Shuai Wei} 
+\date{}
 \maketitle
 
-My interests lie in commutative algebra, with emphasis on its connections to combinatorics. 
+\section{Introduction}
 
-\section{Background}
+My interests lie in commutative algebra, with emphasis on its connections to combinatorics. I mainly work with monomial ideals in the polynomial ring $R = \bbK[X_1,\dots,X_d]$ with $\bbK$ a field, specifically, \emph{edge ideals} of \emph{edge-weighted} graphs $G_\omega$ where $G = (V,E)$ is a finite simple graph with $V = \{v_1,\dots,v_d\}$ and a weight function $\omega: E \to \bbN$ with $\bbN = \{1,2,\dots\}$, as in the following example.
 
-I mainly work with monomial ideals in the polynomial ring $R = \bbK[X_1,\dots,X_d]$ with $\bbK$ a field and \emph{edge-weighted} graphs $G_\omega$ where $G = (V,E)$ is a finite simple graph with $V = \{v_1,\dots,v_d\}$ and a weight function $\omega: E \to \bbN$ with $\bbN = \{1,2,\dots\}$.
+\begin{example} \label{uOmeMJuOmeMExample}
+    Let $G_\omega$ be the following weighted graph with $V(G) = \{v_1,v_2,v_3\}$ and $E(G) = \{v_1v_2,v_2v_3,v_1v_3\}$ and $\omega(v_1v_2) = 1$, $\omega(v_2v_3) = 2$ and $\omega(v_1v_3) = 2$.
+    \[
+        \begin{tikzcd}
+            & v_1 \ar[ld,dash,"1"'] \ar[rd,dash,"2"] \\
+            v_2 \ar[rr,dash,"2"] && v_3
+        \end{tikzcd}
+    \]
+    Then the weighted edge ideal~\cite{MR3055580} of $G_\omega$ is given by 
+    \[I(G_\omega) = (X_1X_2,X_2^2X_3^2,X_1^2X_3^2)R.\]
+\end{example}
 
-The notion of a simplicial complex can be used to compute irreducible decompositions of square-free monomial ideals. In order to study some kinds of non-square-free monomial ideals, I defined a \emph{generalized $\bbN$-weighted simplicial complex} $\Upsilon$ on $V$, which is a non-empty collection of sets of form $(V',\delta')$ with $V' \subseteq V$ and $\delta': V' \to \bbN$ that is closed under $\preccurlyeq$, where for $(V_1',\delta_1'),(V_2',\delta_2') \in \Upsilon$, write $(V_1',\delta_1') \preccurlyeq (V_2',\delta_2')$ if $V_1' \subseteq V_2'$ and $\delta_1' \leq \delta_2'|_{V_2'}$. Furthermore, to obtain a finite version of generalized weighted simplicial complex, we restrict $\delta'$ such that $m_i \leq \delta'(v_i) \leq M_i$ for $i = 1,\dots,d$.  Then I defined an \emph{generalized $\bbN$-weighted simplicial complex} $\Upsilon^{\bfM}$ with respect to $\bfM$ by
-\[\Upsilon^{\bfM} = \{(V',\delta') \in \Upsilon \mid m_i \leq \delta'(v_i) \leq M_i, \fa v_i \in V'\},\] 
-where $\bfM$ can be thought of a matrix in $\bbN_{2 \times d}$ whose $i^{\text{th}}$ column is $\begin{bmatrix}m_i \\ M_i\end{bmatrix}$. Associated to $\Upsilon$, there is a natural definition of \emph{weighted Stanley Reisner ideal} $J_{\Upsilon^{\bfM}}$ with respect to $\bfM$, given by
+    To study such ideals, in my dissertation I introduce the notion of ``generalized $\bbN$-weighted simplicial complex''. This is the topic of Section~\ref{section1} below where I construct a weighted version of Stanley-Reisner correspondence, and if it is ``bounded above'', I give an irredundant decompositon of the weighted Stanley-Reisner ideal in terms of the defined simplicial complex. At the end of this section, I define the Alexander dual in this setting and see how it is related to the dual of a monomial ideal, defined by E. Miller~\cite{miller1998alexander}.
+
+    In Section~\ref{section2}, I discusss how I compute the Cohen-Macaulay type of weighted edge ideals combinatorially for certain edge-weighted graphs. \par
+
+\section{\textsl{\large Generalized $\bbN$-weighted simplicial complex}} \label{section1}
+
+    The Stanley-Reisner correspondence uses simplicial complexes to study square-free monomial ideals. In order to use similar techniques to study certain non-square-free monomial ideals, in my dissertation, I define a weighted version which I call a \emph{generalized $\bbN$-weighted simplicial complex}.
+
+    A \emph{generalized $\bbN$-weighted simplicial complex} on $V$ is a non-empty collection $\Upsilon$ of sets of form $(V',\delta')$ with $V' \subseteq V$ and $\delta': V' \to \bbN$ that is closed under $\preccurlyeq$: For subsets $V_1',V_2' \subseteq V'$ and functions $\delta_1': V_1' \to \bbN$ and $\delta_2': V_2' \to \bbN$, we write $(V_1',\delta_1') \preccurlyeq (V_2',\delta_2')$ if $V_1' \subseteq V_2'$ and $\delta_1' \leq \delta_2'|_{V_2'}$. \par
+    For a subset $V' \subseteq V$ and a function $\delta': V' \to \bbN$, we notationally set
+    \[(V',\delta') = \{v_i^{\delta'(v_i)} \mid v_i \in V'\},\] 
+    where $\delta'(v_i)$ is the \emph{weight} of $v_i$. \par
+    For instance,
+    \[\Upsilon = \{\{v_2^2,v_3\},\{v_2,v_3^2\},\{v_2,v_3\},\{v_2^2\},\{v_3^2\},\{v_1\},\{v_2\},\{v_3\},\emptyset\}\]
+    is a generalized $\bbN$-weighted simplicial complex. \par
+    Associated to $\Upsilon$, we define \emph{weighted Stanley-Reisner ideal} $J_{\Upsilon}$ by
 \begin{align*}
-    J_{\Upsilon^{\bfM}} &= \Bigl(\underline X^{(V',\delta')} \mathrel{\big |}V' \subseteq V, \ \delta': V' \to \bbN,\ m_i \leq \delta'(v_i) \leq M_i, \fa v_i \in V' \text{ and }(V',\delta') \not\in \Upsilon^{\bfM}\Bigr)R.
+    J_{\Upsilon} &= \bigl(\underline X^{(V',\delta')} \mathrel{\big |}V' \subseteq V, \ \delta': V' \to \bbN \text{ and }(V',\delta') \not\in \Upsilon\bigr)R \\
+    &= \left(\prod_{v_i \in V'}X_i^{\delta'(v_i)} \mathrel{\big |}V' \subseteq V, \ \delta': V' \to \bbN \text{ and }(V',\delta') \not\in \Upsilon\right)R.
 \end{align*}
-
-The following definitions will be used in finding irreducible decompositions of $J_{\Upsilon^{\bfM}}$. 
-
-\begin{definition}
-    Let $\rho = (V',\delta')$ with $V' \subseteq V$ and $\delta': V' \to \bbN$. Let
-    \[W_\rho^{\bfM} = \{v_i \in V' \mid \delta'(v_i) < M_i\},\]
-    \[U_\rho^{\bfM} = \{v_i \in V' \mid \delta'(v_i) > m_i\}.\]
-    Define $\tau_\rho^{\bfM}: (V \smallsetminus V') \sqcup W_\rho^{\bfM} \to \bbN$ by
-    \[\tau_\rho^{\bfM}(v_i) = 
-        \left\{\begin{array}{ll}
-                m_i & \text{if }v_i \in V \smallsetminus {V'}, \\
-                \delta'(v_i) + 1 & \text{if }v_i \in W_\rho^{\bfM},
-        \end{array}\right.
-    \]
-    and $\gamma_\rho^{\bfM}: (V \smallsetminus V') \sqcup U_\rho^{\bfM} \to \bbN$ by
-    \[\gamma_\rho^{\bfM}(v_i) = 
-        \left\{\begin{array}{ll}
-                M_i & \text{if } v_i \in V \smallsetminus {V'}, \\
-                \delta'(v_i) - 1 & \text{if }v_i \in U_\rho^{\bfM}.
-        \end{array}\right.
-    \]
-    Let $Q_\rho^{\bfM} \subseteq R$ be the ideal defined by
-    \begin{align*}
-        Q_\rho^{\bfM} & = (X^{\tau_\rho^{\bfM}(v_i)} \mid v_i \in (V \smallsetminus {V'}) \sqcup W_\rho^{\bfM})R \\
-        & = P((V \smallsetminus {V'}) \sqcup W_\rho^{\bfM}, \tau_\rho^{\bfM}).
-    \end{align*}
-\end{definition}
-
-With previous definitions I obtain an irrredundant irreducible decomposition of $J_{\Upsilon^\bfM}$:
+If $\delta': V' \to \bbN$ is the constant function 1 for all $(V',\delta') \in \Upsilon$, then $\Upsilon$ becomes a usual simplicial complex $\Delta$, and this recovers the definition of the original notion of a Stanley-Reisner ideal. \par
+    For example, given the generalized $\bbN$-weighted simplicial complex
+    \[\Upsilon = \{\{v_2^2,v_3\},\{v_2,v_3^2\},\{v_2,v_3\},\{v_2^2\},\{v_3^2\},\{v_1\},\{v_2\},\{v_3\},\emptyset\},\]
+    we have 
+    \[ J_{\Upsilon} = (X_2^2X_3^2,X_1X_2,X_1X_3)R.\]
+    \par Let $I \subseteq R$ be a monomial ideal~\cite{MR3839602}, for $j = 1,\dots,d$ assume $M_j$ is the maximal exponent of $X_j$ on the minimal generators of $I$. We define 
+    \[\Upsilon(I) = \{(V',\delta') \text{ with }V' \subseteq V,\ \delta': V' \to \bbN \text{ and }\delta'(v_i) \leq M_i \fa v_i \in V' \mid \underline X^{(V',\delta')} \not\in I\},\]
+    which is then a generalized $\bbN$-weighted simplicial complex. The next result from my dissertation is a weighted version of the Stanley-Reisner correspondence.
 
 \begin{theorem}
-The ideal $J_{\Upsilon^\bfM}$ has the following irreducible decomposition 
-    \[J_{\Upsilon^\bfM} = \bigcap_{\rho \in \Upsilon^\bfM}Q_\rho^{\bfM} = \bigcap_{\rho \text{ facet}} Q_\rho^{\bfM},\]
-    where the first intersection is taken over all faces of $\Upsilon^\bfM$ and the second intersection is taken over all facets of $\Upsilon^\bfM$. The second intersection is irredundant.
-\end{theorem}
-
-Just like that we have an equality for edge ideal $I(G)$ of the graph $G$ and Stanley Reisner ideal $J_{\Delta_G}$ of independence complex $\Delta_G$, we also have a weighted version of that with repsect to $\bfM$.
-
-\begin{definition}
-    We say that $(V',\delta')$ with $V' \subseteq V$ and $\delta': V' \to \bbN$ is a \emph{weighted independence} set in $G_\omega$ if for any $v_i,v_j \in V'$, either $v_iv_j \not \in E$ or $\min\{\delta'(v_i),\delta'(v_j)\} < \omega(v_iv_j)$. Let $\Upsilon_\omega$ denote the set of weighted independence sets $(V',\delta')$ in $G_\omega$. This is the \emph{weighted independence complex} of $G_\omega$.
-\end{definition}
-
-\begin{definition} \href{https://www.ndsu.edu/pubweb/\~ssatherw/DOCS/paulsen-eiwg.pdf}{[EIOWG]}
-    A \emph{weighted vertex cover} of $G_\omega$ with respect to $\bfM$ is a weighted vertex cover $(V',\delta')$ such that $m_i \leq \delta'(v_i) \leq M_i$ for any $v_i \in V'$. Let $\llV_\omega^\bfM$ be the set of weighted vertex cover of $G_\omega$ with respect to $\bfM$.
-\end{definition}
-
-\begin{theorem} \label{IGWEJUWMThm}
-    If $m_i \leq \min\{\omega(v_iv_j) \mid v_iv_j \in E\}$ and $\max\{\omega(v_iv_j) \mid v_iv_j \in E\} \leq M_i$ for $i = 1,\dots,d$, then
-    \[I(G_\omega) = J_{\Upsilon_\omega^\bfM},\]
-    where by [Definition 3.1 from \href{https://www.ndsu.edu/pubweb/\~ssatherw/DOCS/paulsen-eiwg.pdf}{[EIOWG]},
-    \[I(G_\omega) := (X_i^{\omega(v_iv_j)}X_j^{\omega(v_iv_j)} \mid v_iv_j \in E)R.\]
-\end{theorem}
-
-\begin{lemma} \label{mWIIffMWVCLem} 
-    Let $m_i \leq \min\{\omega(v_iv_j) \mid v_iv_j \in E\}$ and $\max\{\omega(v_iv_j) \mid v_iv_j \in E\} \leq M_i$ for $i = 1,\dots,d$. Let $\rho = (V',\delta')$ be with $V' \subseteq V$ and $\delta':V' \to \bbN$ such that $m_i \leq \delta'(v_i) \leq M_i$ for any $v_i \in V'$, 
     \begin{enumerate}
-        \item \label{mWIIffMWVCLema} 
-            $\rho \in \Upsilon_\omega^\bfM$ (is maximal) if and only if $\wp := ((V \smallsetminus {V'}) \sqcup W_\rho^\bfM,\tau_\rho^\bfM) \in \llV_\omega^\bfM$ (is minimal). 
-        \item \label{mWIIffMWVCLemb}
-            $\rho \in \llV_\omega^\bfM$ is minimal if and only if $\wp := ((V \smallsetminus {V'}) \sqcup U_\rho^\bfM,\gamma_\rho^\bfM) \in \Upsilon_\omega^\bfM$ (is maximal).
+        \item 
+            Let $I \subseteq R$ be a monomial ideal~\cite{MR3839602}, for $j = 1,\dots,d$ assume $M_j$ is the maximal exponent of $X_j$ on the minimal generators of $I$. Then
+            \[J_{\Upsilon(I)} = I.\]
+        \item
+            Let $\Upsilon$ be a generalized $\bbN$-weighted simplicial complex such that for $i = 1,\dots,d$ we have $M_i^\Upsilon := \max\{\delta'(v_i) \mid v_i \in V' \text{ and } (V',\delta') \in \Upsilon\} < \infty$ . Then 
+            \[\Upsilon(J_{\Upsilon}) = \Upsilon.\]
     \end{enumerate}
-\end{lemma}
+\end{theorem}
 
-\begin{theorem} \label{wEIDecomInWIAndMIThm}
-    Let $m_i \leq \min\{\omega(v_iv_j) \mid v_iv_j \in E\}$ and $\max\{\omega(v_iv_j) \mid v_iv_j \in E\} \leq M_i$ for $i = 1,\dots,d$. Then the ideal $J_{\Upsilon_\omega^\bfM}$ has the following irreducible decompositions
-    \[I(G_\omega) =  \bigcap_{\rho \in \Upsilon_\omega^\bfM} Q_\rho^\bfM = \bigcap_{\text{maximal } \rho \in \Upsilon_\omega^\bfM} Q_\rho^\bfM.\]
+    For instance, with $J_\Upsilon = (X_2^2X_3^2,X_1X_2,X_1X_3)R$, we have 
+    \begin{align*}
+        \Upsilon(J_\Upsilon) &= \{(V',\delta') \text{ with }V' \subseteq V \text{ and } \delta': V' \to \bbN \mid \underline X^{(V',\delta')} \not\in J_{\Upsilon}\} \\
+        &= \{\{v_2^2,v_3\},\{v_2,v_3^2\},\{v_2,v_3\},\{v_2^2\},\{v_3^2\},\{v_1\},\{v_2\},\{v_3\},\emptyset\} \\
+        &= \Upsilon.
+    \end{align*}
+
+    In my dissertation, I show that, as in the classical setting, these yield an irrredundant irreducible decomposition of $J_{\Upsilon^\bfM}$:
+
+\begin{theorem} \label{JUbfMDecompositionThm}
+    Let $\Upsilon$ be a generalized $\bbN$-weighted simplicial complex such that for $i = 1,\dots,d$ we have $M_i^\Upsilon := \max\{\delta'(v_i) \mid v_i \in V' \text{ and } (V',\delta') \in \Upsilon\} < \infty$ . Then the ideal $J_{\Upsilon}$ has the following irreducible (primary) decomposition 
+    \[J_{\Upsilon} = \bigcap_{\text{face }\rho \in \Upsilon}Q_\rho = \bigcap_{\rho \text{ facet}} Q_\rho,\]
+    where $Q_\rho = (X^{\tau_\rho(v_i)} \mid v_i \in (V \smallsetminus {V'}) \sqcup W_\rho)R$, $W_\rho = \{v_i \in V' \mid \delta'(v_i) < M_i^{\Upsilon}\}$ and $\tau_\rho: (V \smallsetminus V') \sqcup W_\rho \to \bbN$ is given by
+    \[\tau_\rho(v_i) = 
+        \left\{\begin{array}{ll}
+                1 & \text{if }v_i \in V \smallsetminus {V'}, \\
+                \delta'(v_i) + 1 & \text{if }v_i \in W_\rho.
+        \end{array}\right.
+    \]
     The second intersection is irredundant.
 \end{theorem}
 
-\begin{definition}
-    Define the \emph{Alexander dual} of $\Upsilon^\bfM$ by
-    \[(\Upsilon^\bfM)^\vee = \{\rho := (V',\delta') \text{ with }V' \subseteq V, \ \delta': V' \to \bbN,\text{ and }  m_i \leq \delta'(v_i) \mid ((V \smallsetminus {V'}) \sqcup W_\rho^\bfM,\varphi_\rho^\bfM) \not\in \Upsilon^\bfM\}.\]
-    Then $(\Upsilon^\bfM)^\vee$ is a weighted simplicial complex with respect to $\bfM$ closed under ``$\preccurlyeq$''. 
-\end{definition}
+For instance, with 
+\[\Upsilon = \{\{v_2^2,v_3\},\{v_2,v_3^2\},\{v_2,v_3\},\{v_2^2\},\{v_3^2\},\{v_1\},\{v_2\},\{v_3\},\emptyset\},\]
+and $M_1^{\Upsilon} = 1$, $M_2^{\Upsilon} = 2$ and $M_3^{\Upsilon} = 2$, we have 
+\begin{align*}
+    J_{\Upsilon} &= \bigcap_{\text{face }\rho \in \Upsilon}Q_\rho  \\
+    &= Q_{\{v_2^2,v_3\}} \cap Q_{\{v_2,v_3^2\}} \cap Q_{\{v_2,v_3\}} \cap Q_{\{v_2^2\}} \cap Q_{\{v_3^2\}} \cap Q_{\{v_1\}} \cap Q_{\{v_2\}} \cap Q_{\{v_3\}} \cap Q_{\emptyset} \\
+    &= (X_1,X_3^2)R \cap (X_1,X_2^2)R \cap (X_1,X_2^2,X_3^2)R \cap (X_1,X_3)R \cap (X_1,X_2)R \cap (X_2,X_3)R \\
+    & \ \ \ \cap (X_1,X_3)R \cap (X_1,X_2)R \cap (X_1,X_2,X_3)R \\
+    &= (X_1,X_3^2)R \cap (X_1,X_2^2)R \cap (X_2,X_3)R \\
+    &= Q_{\{v_2^2,v_3\}} \cap Q_{\{v_2,v_3^2\}} \cap Q_{\{v_1\}} \\
+    &= \bigcap_{\text{facet }\rho \in \Upsilon}Q_\rho.
+\end{align*}
 
-\begin{definition}
-    Write $I = \bigcap_{i=1}^n P(V_i',\delta_i')$ as a irredundant irreducible decomposition. Define the \emph{Alexander dual} of $I$ by
+Much of our interest in this area focuses on the edge ideal $I(G)$ of a graph $G$~\cite{MR3822066} in some weighted settings. For the classical construction, this is the same as the Stanley-Reisner ideal $J_{\Delta_G}$ of the independence complex $\Delta_G$; this is the set of all independent subsets of $V$ where $W \subseteq V$ is \emph{independent} if no two vertices in $W$ are adjacent in $G$. In my dissertation I introduce and investigate the following weighted version of this notion. \par
+    Let $G_\omega$ be an edge weighted graph on $V$. We say that an ordered pair $(V',\delta')$ with $V' \subseteq V$ and $\delta': V' \to \bbN$ satisfying $\delta'(v_i) \leq \max\{\omega(v_iv_j) \mid v_iv_j \in E\}$ for any $v_i \in V'$ is a \emph{weighted independent} set in $G_\omega$ if for any $v_i,v_j \in V'$, either $v_iv_j \not \in E$, or $\min\{\delta'(v_i),\delta'(v_j)\} < \omega(v_iv_j)$. Let $\Upsilon_\omega$ denote the set of weighted independent sets $(V',\delta')$ in $G_\omega$. This is the \emph{weighted independence complex} of $G_\omega$. \par
+    The weighted independent sets in $G_\omega$ from Example~\ref{uOmeMJuOmeMExample} are by definition
+    \[\Upsilon_\omega = \{\{v_1^2,v_3\},\{v_1,v_3^2\},\{v_1,v_3\},\{v_2^2,v_3\},\{v_2,v_3^2\},\{v_2,v_3\},\,\{v_1^2\},\{v_2^2\},\{v_3^2\},\{v_1\},\{v_2\},\{v_3\},\emptyset\}.\]
+
+    The weighted edge ideal $I(G_\omega)$ can be decomposed in terms of weighted vertex covers of $G_\omega$ by~\cite{MR3055580}. In my dissertation I give the following decomposition result for these ideals in terms of weighted independent sets.
+\begin{theorem} \label{wEIDecomInWIAndMIThm}
+    We have $M_i^{\Upsilon_\omega} = \max\{\omega(v_iv_j) \mid v_iv_j \in E\}$ for $i = 1,\dots,d$. The ideal $J_{\Upsilon_\omega}$ has the following irreducible (primary) decompositions
+    \[I(G_\omega) =  J_{\Upsilon_\omega} = \bigcap_{\rho \in \Upsilon_\omega} Q_\rho = \bigcap_{\text{maximal } \rho \in \Upsilon_\omega} Q_\rho.\]
+    The second intersection is irredundant.
+\end{theorem}
+    For instance, in Example~\ref{uOmeMJuOmeMExample}, with $M_1^{\Upsilon_\omega} = 2$, $M_2^{\Upsilon_\omega} = 2$ and $M_3^{\Upsilon_\omega} = 2$, we have
+\begin{align*}
+    J_{\Upsilon_\omega} &= \bigcap_{\text{face }\rho \in \Upsilon_\omega}Q_\rho  \\
+    &= Q_{\{v_1^2,v_3\}} \cap Q_{\{v_1,v_3^2\}} \cap Q_{\{v_1,v_3\}} \cap Q_{\{v_2^2,v_3\}} \cap Q_{\{v_2,v_3^2\}} \cap Q_{\{v_2,v_3\}} \\
+    & \cap Q_{\{v_1^2\}} \cap Q_{\{v_2^2\}} \cap Q_{\{v_3^2\}} \cap Q_{\{v_1\}} \cap Q_{\{v_2\}} \cap Q_{\{v_3\}} \cap Q_{\emptyset} \\
+    &= (X_2,X_3^2)R \cap (X_1^2,X_2)R \cap (X_1^2,X_2,X_3^2)R \cap (X_1,X_3^2)R \cap (X_1,X_2^2)R \cap (X_1,X_2^2,X_3^2)R \\
+    & \cap (X_2,X_3)R \cap (X_1,X_3)R \cap (X_1,X_2)R \cap (X_2,X_3)R \cap (X_1,X_3)R \cap (X_1,X_2)R \cap (X_1,X_2,X_3)R \\
+    &= (X_2,X_3^2) \cap (X_1^2,X_2) \cap (X_1,X_3^2)R \cap (X_1,X_2^2)R \\
+    &= Q_{\{v_1^2,v_3\}} \cap Q_{\{v_1,v_3^2\}} \cap Q_{\{v_2^2,v_3\}} \cap Q_{\{v_2,v_3^2\}} \\
+    &= \bigcap_{\text{facet }\rho \in \Upsilon_\omega}Q_\rho.
+\end{align*}
+
+    Let $\Upsilon$ be a generalized $\bbN$-weighted simplicial complex such that for $i = 1,\dots,d$ we have $M_i^\Upsilon < \infty$. Define the \emph{Alexander dual} $\Upsilon^\vee$ of $\Upsilon$ by
+    \[\Upsilon^\vee = \{\rho := (V',\delta') \text{ with }V' \subseteq V, \ \delta': V' \to \bbN \mid ((V \smallsetminus {V'}) \sqcup W_\rho,\varphi_\rho) \not\in \Upsilon\},\]
+    where $\varphi_\rho: (V \smallsetminus V') \sqcup W_\rho \to \bbN$ is defined by
+    \[\varphi_\rho(v_i) = 
+        \left\{\begin{array}{ll}
+                M_i & \text{if }v_i \in V \smallsetminus {V'}, \\
+                M_i-\delta'(v_i) & \text{if }v_i \in W_\rho.
+        \end{array}\right.
+    \]
+    Then $\Upsilon^\vee$ is a generalied $\bbN$-weighted simplicial complex. \par
+    For instance, the dual of the weighted independence complex $\Upsilon_\omega$ for Example~\ref{uOmeMJuOmeMExample} is
+    \[\Upsilon_\omega^\vee = \{\{v_1,v_3^2\},\{v_2,v_3^2\},\{v_1,v_3\},\{v_1,v_2\},\{v_2,v_3\},\{v_1\},\{v_2\},\{v_3^2\},\{v_3\},\emptyset\}.\]
+    Then
+    \[J_{\Upsilon_\omega^\vee} = (X_1^2X_2,X_1X_2^2,X_1^2X_3,X_2^2X_3)R.\]
+    \par In addition, I introduce and investigate a variation of E. Miller’s algebraic Alexander duality~\cite{miller1998alexander} in this context which is slightly better behaved in some respects. \par
+    \par Let $I \subseteq R$ be a monomial ideal, for $j = 1,\dots,d$ assume $M_j$ and $m_j$ are the maximal and minimal exponent of $X_j$ on the minimal generators of $I$, respectively. Write $I = \bigcap_{i=1}^n P(V_i',\delta_i')$ as a irredundant irreducible decomposition, where $P(V_i',\delta_i') = (X_{j_i}^{\delta_i'(v_{j_i})} \mid v_{j_i} \in V_i')R$. Define the \emph{Alexander dual} $I^\vee$ of $I$ by
     \[I^\vee = (\underline X^{(V_i',\delta_i'')} \mid i = 1,\dots,n),\]
-    where for $i = 1,\dots,n$: $\delta_i''(v_j) = M_j + m_i - \delta_i'(v_j)$ for any $v_j \in V_i'$.
-\end{definition}
-
-If $m_i = 1$ for $i = 1,\dots,d$, then the definition is consistent with the one from \href{https://rejecta.github.io/mathematica/files/articles/RMv1n1-Miller.pdf}{Alexander Duality for Monomial Ideals and Their Resolutions} by Ezra Miller.
+    where for $i = 1,\dots,n$: $\delta_i''(v_j) = M_j + m_j - \delta_i'(v_j)$ for any $v_j \in V_i'$ and $\underline X^{(V_i',\delta_i'')} = \prod_{v_i \in V_i'}X_i^{\delta''(v_i)}$. If all the $m_j$'s are 1 in the above definition, then it recovers the classical Alexander dual. In terms of this definition, I am working on proving that $I^{\vee\vee} = I$. \par
+    In some situations, E. Miller's definition works better. So for the rest of this section I'll use his duality definition for monomial ideals. I justify the name of the previous construction by showing in the next two results from my dissertation that Alexander duality commutes with the weighted Stanley-Reisner correspondence.
 
 \begin{theorem}
-    \[(J_{\Upsilon^\bfM})^\vee = J_{(\Upsilon^\bfM)^\vee}.\]
+    Let $\Upsilon$ be a generalized $\bbN$-weighted simplicial complex such that for $i = 1,\dots,d$ we have $M_i^\Upsilon < \infty$. Then
+    \[J_{\Upsilon}^\vee = J_{\Upsilon^\vee}.\]
 \end{theorem}
 
-\section{Cohen-Macaulay type of weighted edge ideals}
+For instance, consider the weighted independence complex $\Upsilon_\omega$ for Example~\ref{uOmeMJuOmeMExample}. Since the irredundant irreducible decomposition of $I(G_\omega)$ is 
+\[I(G_\omega) = (X_1X_2,X_2^2X_3^2,X_1^2X_3^2) = (X_1,X_2^2)R \cap (X_1^2,X_2)R \cap (X_1,X_3^2)R \cap (X_2,X_3^2)R,\]
+we have
+\[J_{\Upsilon_\omega}^\vee = I(G_\omega)^\vee = (X_1^2X_2,X_1X_2^2,X_1^2X_3,X_2^2X_3)R = J_{\Upsilon_\omega^\vee}.\]
 
-One of my main research goals is to compute combinatorially the (finite) dimension of $\bbK$-vector space $\operatorname{Ext}_R^{n}(\bbK,R/I)$ with $n := \operatorname{depth}_R(R/I)$, where $I$ comes from edge-weighted graphs as a monomial ideal in $R$. Regard $R/I$ as a \emph{graded $R$-module} with natural grading, then $R/I$ behaves like a \emph{local ring} with the unique \emph{maximal homogeneous ideal} $\ffX/I$ where $\ffX = (X_1,\dots,X_d)R$. From now on all algebraic objects and morphisms will be homogeneous or graded by default. In this setting the $R$-module $\operatorname{Ext}_R^n(\bbK,R/I)$ is also called the \emph{type} of $R/I$, denoted by
-    \[\operatorname{r}_R(R/I) = \dim_\bbK(\operatorname{Ext}_R^n(\bbK,R/I)).\]
-    Since the notation of Cohen-Macaulay ring is a workhorse of commutative algebra and have been shown over and over again in the literature to be extremely nice. I put my interests in computing $\operatorname{r}_R(R/I)$ when $R/I$ is a Cohen-Macaulay $R$-module and again $I \subseteq R$ is a monomial ideal contructed combinatorially from edge-weighted graphs. 
+\begin{theorem}
+    If $I \subseteq R$ is a monomial ideal, then 
+    \[\Upsilon(I^\vee) = \Upsilon(I)^\vee.\]
+\end{theorem}
+    For instance, consider the weighted edge ideal $I(G_\omega)$ for Example~\ref{uOmeMJuOmeMExample}. We have by Macaulay2
+    \[I(G_\omega)^\vee = (X_1^2X_2,X_1X_2^2,X_1^2X_3,X_2^2X_3).\]
+Then 
+\[\Upsilon(I(G_\omega)^\vee) = \{\{v_1,v_2\},\{v_1,v_3^2\},\{v_1,v_3\},\{v_2,v_3^2\},\{v_2,v_3\},\{v_3^2\},\{v_1\},\{v_2\},\{v_3\}, \emptyset\}.\]
+We can show that $\Upsilon(I(G_\omega)) = \Upsilon_\omega$ generally. In this particular example, we have
+    \begin{align*}
+        \Upsilon(I(G_\omega))^\vee &= \Upsilon_\omega^\vee \\
+        &= \{\{v_1,v_3^2\},\{v_2,v_3^2\},\{v_1,v_3\},\{v_1,v_2\},\{v_2,v_3\},\{v_1\},\{v_2\},\{v_3^2\},\{v_3\},\emptyset\} \\
+        &= \Upsilon(I(G_\omega)^\vee).
+    \end{align*}
 
-    If $R/I(G_\omega)$ is Cohen-Macaulay and $\dim(R/I(G_\omega)) = 0$, then $\operatorname{depth}(R/I(G_\omega)) = 0$ and so
-    \[\operatorname{type}(R/I(G_\omega)) = \dim_\bbK(\operatorname{Ext}_R^0(\bbK,R/I(G_\omega))) = \dim_\bbK(\operatorname{Hom}_R(\bbK,R/I(G_\omega))) = t,\]
-    where $t$ is the number of \emp{parametric ideals} occuring in an irredundant \emhp{parametric decomposition} of $I(G_\omega)$, which is also the the number of irreducible ideals occuring in the irredundant irreducible decomposition of $I(G_\omega)$.
+\section{\textsl{\large Cohen-Macaulay type of weighted edge ideals}} \label{section2}
+The \emph{type}~\cite{MR1251956} of a graded Cohen-Macaulay quotient ring $R/I$ 
+    \[\operatorname{r}_R(R/I) = \dim_\bbK(\operatorname{Ext}_R^n(\bbK,R/I))~\cite{sather2009homological}\]
+    quantifies important aspects of the minimal injective resolution of $R/I$ and is accordingly a measure of how close the ring is to being Gorenstein~\cite{MR0242802}. However, this invariant is generally quite difficult to compute. In my dissertation, I explicitly calculate this number combinatorially when $I$ is a monomial ideal constructed from an edge-weighted graph. \par
+    For an edge-weighted graph $G_\omega$, Paulsen and Sather-Wagstaff introduce a notion of weighted vertex cover and minimal weighted vertex cover~\cite{MR3055580} that is similar to the unweighted notions, but that also tracks weighted information. For instance, the minimal weighted vertex covers for the weighted 2-path 
+    \[(P_2)_\epsilon = (\begin{tikzcd}v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3)\end{tikzcd}\]
+    are indicated graphically by circling the vertices in the cover and giving them weights that ``cover'' all the weighted edges of the graph:
+    \[
+        \begin{tikzcd}[every matrix/.append style={name=m},
+          execute at end picture={
+              \draw [<-] (m-1-1) ellipse (0.33cm and 0.26cm);
+              \draw [<-] (m-1-3) ellipse (0.33cm and 0.26cm);
+          }]
+          v_1^2 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3^3
+        \end{tikzcd} \ \ \ \ \ \ 
+        \begin{tikzcd}[every matrix/.append style={name=m},
+          execute at end picture={
+              \draw [<-] (m-1-2) ellipse (0.33cm and 0.26cm);
+          }]
+          v_1 \ar[r,dash,"2"] & v_2^2 \ar[r,dash,"3"] & v_3.
+        \end{tikzcd}
+    \]
+    Paulsen and Sather-Wagstaff~\cite{MR3055580} also characterize the weighted trees that are Cohen-Macaulay. Their characterization is similar to Villarreal's description of the unweighted Cohen-Macaulay trees~\cite{MR1031197}. In particular, they are all weighted ``suspensions,'' which we write as $G_\omega=(\Sigma H)_\omega$ where $H_\epsilon$ is an induced weighted subgraph. In the following theorem in my dissertation, I show how to compute the type of $R'/I((\Sigma H)_\omega)$ combinatorially in terms of the information of $H_\epsilon$.
 
-
-\begin{theorem}\label{computeTypeOfWRPathOfWRPathSuspension}
-    Let $(\Sigma_rG)_\lambda$ be a weighted $r$-path suspension of $G_\omega$ such that $\lambda(v_iv_j) \leq \lambda(v_i,v_{i,1})$ and $\lambda(v_iv_j) \leq \lambda(v_j,v_{j,1})$ for all edges $v_iv_j \in E$. 
-    \[\operatorname{r}_{R'}\biggl(\frac{R'}{I_r((\Sigma_r G)_\lambda)}\biggr) = \sharp\, \{\text{$\mathcal p$-minimal weighted $r$-path vertex covers of $(\Sigma_{r-1}G)_{\lambda'}$}\}, \ \lambda' = \lambda|_{\Sigma_{r-1}G}.\]
+\begin{theorem} \label{weightedCMTypeEqualToMinWVCTheorem}
+    Let $(\Sigma H)_\omega$ be a Cohen-Macaulay weighted suspension~\cite{MR3055580} of $H_\epsilon$ such that $\omega(v_iv_j) \leq \omega(v_iw_i)$ and $\omega(v_iv_j) \leq \omega(w_jv_j)$ for each $v_iv_j \in E$. Then
+    \[\operatorname{r}_{R'}\biggl(\frac{R'}{I((\Sigma H)_\omega)}\biggr) = \sharp\, \{\text{minimal weighted vertex covers of }H_\epsilon\}.\]
 \end{theorem}
 
-Set $r = 1$ in Theorem~1.1, then a $\mathcal p$-minimal weighted 1-path vertex cover of $(\Sigma_1G)_\lambda$ becomes a minimal weighted vertex cover of $(\Sigma G)_\lambda$ and $\lambda' = \lambda|_{\Sigma_0G} = \lambda|_G = \omega$, so we get the following corollary.
+    For example, an example of a Cohen-Macaulay weighted suspension $(\Sigma P_2)_\omega$ of 
+    \[(P_2)_\epsilon = (\begin{tikzcd}v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3\end{tikzcd})\]
+    is 
+    \[
+        \begin{tikzcd}
+            w_1 \ar[d,dash,"5"] & w_2 \ar[d,dash,"3"] & w_3 \ar[d,dash,"4"] \\
+            v_1 \ar[r,dash,"2"] & v_2 \ar[r,dash,"3"] & v_3.
+        \end{tikzcd}
+    \]
+    Then since we calculated the minimal weighted vertex covers of $(P_2)_\epsilon$ above, we have
+    \[\operatorname{r}_{R'}\bigl(R'/I((\Sigma P_2)_\omega)\bigr) = \sharp\, \{\text{minimal weighted vertex covers of }(P_2)_\epsilon\} = 2.\]
 
-\begin{corollary} \label{weightedCMTypeEqualToMinWVCTheorem}
-    Let $(\Sigma G)_\lambda$ be a weighted suspension of $G_\omega$ such that $\lambda(v_iv_j) \leq \lambda(v_iw_i)$ and $\lambda(v_iv_j) \leq \lambda(w_jv_j)$ for each $v_iv_j \in E$. Then
-    \[\operatorname{r}_{R'}\biggl(\frac{R'}{I((\Sigma G)_\lambda)}\biggr) = \sharp\, \{\text{minimal weighted vertex covers of }G_\omega\}.\]
-\end{corollary}
+\section{\textsl{\large Future Work}}
 
-\section{Cohen-Macaulay edge-weighted chordal graphs classifying}
+I will continue to study the Cohen-Macaulayness of monomial ideals $I$ by studying $\Upsilon(I)$ combinatorially and I will also investigate when $I$ is sequentially Cohen-Macaulay and describe the minimal free resolution of $I$ using these ideas. 
 
-        Finally, I classified all Cohen-Macaulay edge-weighted chordal graphs following the classification of all Cohen-Macaulay chordal graphs \href{https://arxiv.org/pdf/math/0407375.pdf}{[CMCG]} by J$\ddot{\text{u}}$rgen. The characterization is purely graph-theoretical, and it turns out that for weighted chordal graphs the Cohen-Macaulay property is independent of the field $\bbK$.
+Furthermore, I am interested in classifying certain other monomial ideal constructions (e.g., path ideals~\cite{MR3175038,MR3335988}) for edge-weighted graphs which are Cohen-Macaulay, and then computing the type combinatorially. \par
 
-\begin{theorem} \label{CMUnmixedEquivalenceThm}
-    Let $G_\lambda$ be a edge-weighted chordal graph. Let $F_1,\dots,F_m$ be the facets of $\Delta(G)$ which admit a free vertex satisfying that for $i = 1,\dots,m$: there doesn't exists a rooted spanning forest $\ffF$ of $G[F_i]$ in which each component $T$ has a nonfree vertex $\nu_1^T$ as the root such that there is a nonfree vertex $\nu_0^T$ in $V \smallsetminus F_i$ with $\nu_0^T\nu_1^T \in E$ which satisfies that for any path $\nu_1^Tv_2 \cdots v_k$ in $T$ with $v_k$ a $T$-leaf if $k \geq 2$, then $\lambda(\nu_0^T\nu_1^T) > \lambda(\nu_1^Tv_2) > \lambda(v_2v_3) > \cdots > \lambda(v_{k-1}v_k)$, and which satisfies that for any component(s) $S,T$ of $\ffF$ if $u$ is an $S$-inner vertex and $v$ is a $T$-inner vertex with $u \neq v$, then 
-    \[\lambda(uv) > \min\{\max\{\lambda(uw) \mid \text{$u$ is the $S$-parent of $w$}\},\max\{\lambda(vx) \mid \text{$v$ is the $T$-parent of $x$}\}\};\]
-    if $u$ is an $S$-inner vertex such that $u \nu_0^T \in E$, then
-    \begin{align*}
-        \lambda(u\nu_0^T) &> \min\{\max\{\lambda(uw) \mid \text{$u$ is the $S$-parent of $w$}\}, \\
-        &\ \ \ \ \ \ \ \ \ \, \max\{\lambda(\nu_0^T\nu_1^Y) \mid \text{$Y$ is a component of $\ffF$ such that $\nu_0^T = \nu_0^Y$}\}\};
-    \end{align*}
-    and if $\nu_0^S\nu_0^T \in E$, then 
-    \begin{align*}
-        \lambda(\nu_0^S\nu_0^T) &> \min\{\max\{\lambda(\nu_0^S\nu_1^Y) \mid \text{$Y$ is a component of $\ffF$ such that $\nu_0^S = \nu_0^Y$}\}, \\
-        &\ \ \ \ \ \ \ \ \ \, \max\{\lambda(\nu_0^T\nu_1^Z) \mid \text{$Z$ is a component of $\ffF$ such that $\nu_0^T = \nu_0^Z$}\}\}.
-    \end{align*}
-    Then the following conditions are equivalent.
-    \begin{enumerate}
-        \item $G_\lambda$ is Cohen-Macaulay;
-        \item $G_\lambda$ is Cohen-Macaulay over $\bbK$;
-        \item $G_\lambda$ is unmixed;
-        \item $[n]$ is the disjoint union of $F_1,\dots,F_m$.
-    \end{enumerate}
-\end{theorem}
-
-\begin{theorem} \label{CMUnmixedEquivalenceNecessaryThm}
-    Let $G_\lambda$ be a edge-weighted chordal graph. Let $F_1,\dots,F_m$ be the facets of $\Delta(G)$ which admit a free vertex satisfying that $[n]$ is the disjoint union of $F_1,\dots,F_m$. If $G_\lambda$ is Cohen-Macaulay, then there doesn't exists a rooted spanning forest $\ffF$ of $G[F_i]$ in which each component $T$ has a nonfree vertex $\nu_1^T$ as the root such that there is a nonfree vertex $\nu_0^T$ in $V \smallsetminus F_i$ with $\nu_0^T\nu_1^T \in E$ which satisfies that for any path $\nu_1^Tv_2 \cdots v_k$ in $T$ with $v_k$ a $T$-leaf if $k \geq 2$, then $\lambda(\nu_0^T\nu_1^T) > \lambda(\nu_1^Tv_2) > \lambda(v_2v_3) > \cdots > \lambda(v_{k-1}v_k)$, and which satisfies that for any component(s) $S,T$ of $\ffF$ if $u$ is an $S$-inner vertex and $v$ is a $T$-inner vertex with $u \neq v$, then 
-    \[\lambda(uv) > \min\{\max\{\lambda(uw) \mid \text{$u$ is the $S$-parent of $w$}\},\max\{\lambda(vx) \mid \text{$v$ is the $T$-parent of $x$}\}\};\]
-    if $u$ is an $S$-inner vertex such that $u \nu_0^T \in E$, then
-    \begin{align*}
-        \lambda(u\nu_0^T) &> \min\{\max\{\lambda(uw) \mid \text{$u$ is the $S$-parent of $w$}\}, \\
-        &\ \ \ \ \ \ \ \ \ \, \max\{\lambda(\nu_0^T\nu_1^Y) \mid \text{$Y$ is a component of $\ffF$ such that $\nu_0^T = \nu_0^Y$}\}\};
-    \end{align*}
-    and if $\nu_0^S\nu_0^T \in E$, then 
-    \begin{align*}
-        \lambda(\nu_0^S\nu_0^T) &> \min\{\max\{\lambda(\nu_0^S\nu_1^Y) \mid \text{$Y$ is a component of $\ffF$ such that $\nu_0^S = \nu_0^Y$}\}, \\
-        &\ \ \ \ \ \ \ \ \ \, \max\{\lambda(\nu_0^T\nu_1^Z) \mid \text{$Z$ is a component of $\ffF$ such that $\nu_0^T = \nu_0^Z$}\}\}.
-    \end{align*}
-\end{theorem}
+\bibliographystyle{plain} 
+\bibliography{bibliography}
 
 \end{document}
+
 </pre>
 </body>
 </html>
