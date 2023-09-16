@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://shuaiwei-math.github.ioshuaiwei-math/sitemap.xml
+Sitemap: https://shuaiwei-math.github.io/sitemap.xml
