@@ -27,8 +27,8 @@
       "name": "University of New Mexico",
       "position": "Instructional Post-Doctoral Fellow",
       "url": "https://math.unm.edu/people/academic-personnel/shuai-wei",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
+      "startDate": "2022-07-31",
+      "endDate": "2024-08-01",
       "summary": "Teaching the undergradute statistics, logic, algera, etc.",
       "highlights": [
         "Combinatorial commutative algebra", 
@@ -43,22 +43,14 @@
       "url": "https://www.clemson.edu/science/academics/departments/mathstat/index.html",
       "area": "Mathematics",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "2016-01-10",
+      "endDate": "2016-07-31",
       "score": "",
       "courses": [
         "Combinatorial commutative algebra"
       ]
     }
   ],
-  // "awards": [
-  //   {
-  //     "title": "Nobel Prize in Physics",
-  //     "date": "1921-11-01",
-  //     "awarder": "Royal Swedish Academy of Sciences",
-  //     "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-  //   }
-  // ],
   "certificates": [],
   "publications": [],
   "skills": [],
