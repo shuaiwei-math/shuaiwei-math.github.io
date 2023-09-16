@@ -9,9 +9,6 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>SMLC-347 </p>
-    <p>1700 Lomas Blvd NE</p>
-    <p>Albuquerque, NM 87131</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
