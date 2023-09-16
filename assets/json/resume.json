@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Shuai Wei",
+    "label": "Algebraist",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "wei6@unm.edu",
+    "phone": "(864) 624-3681",
+    "url": "https://shuaiwei-math.github.io/",
+    "summary": "",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -24,14 +24,14 @@
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
+      "name": "University of New Mexico",
+      "position": "Instructional Post-Doctoral Fellow",
+      "url": "https://math.unm.edu/people/academic-personnel/shuai-wei",
       "startDate": "1933-01-01",
       "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "summary": "Teaching the undergradute statistics, logic, algera, etc.",
       "highlights": [
-        "Relativity"
+        "Combinatorial commutative algebra", "differential operators"
       ]
     }
   ],
