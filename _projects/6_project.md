@@ -4,7 +4,7 @@ title: project 6
 description: binary trees
 img:
 importance: 4
-category: fun
+category: ds
 ---
 
 {::nomarkdown}
