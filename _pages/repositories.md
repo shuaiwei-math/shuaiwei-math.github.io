@@ -2,10 +2,24 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.
+description: Materials for courses I took. 
 nav: true
 nav_order: 5
 ---
+
+<ul>
+<li> Linear Models in Statistics <a href="../assets/pdf/ls.pdf">[Notes]</a> <br /> </li>
+<li> Probability Essentials, Point Processes, and Martingels<a href="../assets/pdf/pe.pdf">[Notes]</a> <br /> </li>
+<li> Realiability and Life Test<a href="../assets/pdf/pe.pdf">[Notes]</a> <br /> </li>
+<li> Functional Analysis <a href="../assets/pdf/fa.pdf">[Notes]</a> <br /> </li>
+<li> Analytic Number Theory and Combinatorics <a href="../assets/pdf/anlc.pdf">[Notes]</a> <br /> </li>
+<li> Graph Theory <a href="../assets/pdf/gt.pdf">[Notes]</a> <br /> </li>
+<li> Elementary Number Theory <a href="../assets/pdf/ent.pdf">[Notes]</a> <br /> </li>
+<li> Algebraic Number Theory <a href="../assets/pdf/ant.pdf">[Notes]</a> <br /> </li>
+<li> Homological Algebra <a href="../assets/pdf/hla.pdf">[Notes]</a> <br /> </li>
+<li> Commutative Algebra <a href="../assets/pdf/cc.pdf">[Notes]</a> <br /> </li>
+
+</ul>  
 
 <!-- ## GitHub users
 
