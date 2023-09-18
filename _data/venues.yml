@@ -1,15 +1,13 @@
 "JA":
   url: https://www.sciencedirect.com/journal/journal-of-algebra
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
 
 "JAA":
   url: https://www.worldscientific.com/worldscinet/jaa
 
 "CUMS": 
   url: https://tigerprints.clemson.edu/all_theses/3173
+  color: "#00369f"
 
 "CUPHD": 
   url: https://tigerprints.clemson.edu/all_dissertations/3248
+  color: "#00369f"
