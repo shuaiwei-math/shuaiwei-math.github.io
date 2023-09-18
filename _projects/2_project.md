@@ -2,7 +2,7 @@
 layout: page
 title: Stack, Queuq, and Deque
 description: 
-img: assets/img/3.jpg
+img: assets/img/12.jpg
 importance: 2
 category: Data Structures
 giscus_comments: true

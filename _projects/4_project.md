@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Graph Plotting and Spanning Trees
+title: Plotting and Spanning Trees
 description: 
 img: assets/img/12.jpg
 importance: 4
