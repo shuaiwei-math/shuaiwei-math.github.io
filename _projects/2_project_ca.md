@@ -5,7 +5,7 @@ description: sort
 img: assets/img/12.jpg
 # redirect: ../
 importance: 2
-category: cc
+category: Commutative Algebra
 related_publications: 
 # related_publications: wei:s, wei:sd
 

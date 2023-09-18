@@ -4,7 +4,7 @@ title: project 2
 description: stack, queuq, and deque
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: Data Structures
 giscus_comments: true
 ---
 

@@ -4,7 +4,7 @@ title: project 1
 description: sort
 img: assets/img/12.jpg
 importance: 1
-category: ds
+category: Data Structures
 related_publications: 
 # related_publications: wei:s, wei:sd
 

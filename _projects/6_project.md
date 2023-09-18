@@ -4,7 +4,7 @@ title: project 6
 description: binary trees
 img:
 importance: 6
-category: ds
+category: Data Structures
 ---
 
 {::nomarkdown}

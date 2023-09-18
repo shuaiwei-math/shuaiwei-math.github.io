@@ -4,7 +4,7 @@ title: project 5
 description: priority queue
 img: assets/img/1.jpg
 importance: 5
-category: ds
+category: Data Structures
 ---
 
 {::nomarkdown}

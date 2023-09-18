@@ -4,7 +4,7 @@ title: project 3
 description: trees and graphs
 img: assets/img/3.jpg
 importance: 3
-category: ds
+category: Data Structures
 giscus_comments: true
 ---
 

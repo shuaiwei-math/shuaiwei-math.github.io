@@ -6,7 +6,7 @@ description: A growing collection of my projects.
 
 nav: true
 nav_order: 4
-display_categories: [ds, ca]
+display_categories: [Data Structures, Commutative Algebra]
 horizontal: false
 ---
 

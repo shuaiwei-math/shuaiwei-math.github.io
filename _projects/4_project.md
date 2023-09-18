@@ -4,7 +4,7 @@ title: project 4
 description: grap plotting and spanning tress
 img:
 importance: 4
-category: ds
+category: Data Structures
 ---
 
 {::nomarkdown}
