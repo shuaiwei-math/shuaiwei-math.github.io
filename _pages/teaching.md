@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Materials for courses I taught. 
 nav: true
 nav_order: 5
 ---
@@ -11,10 +11,11 @@ For now, this page is assumed to be a static description of your courses. You ca
 
 Organize your courses by years, topics, or universities, however you like!
 
-Fall 2023 – MATH321 Linear Algebra 
-          - MATH327 Logics
-Spring 2023 – MATH327 Logics  
-            - MATH421 Abstract Algebra II
+Fall 2023:   MATH-321 Linear Algebra <br />
+             MATH 327 Discrete Structures  
+
+Spring 2023: MATH-327 Discrete Structures <br /> 
+             MATH 421 Modern Algebra II
           
-Fall 2022 – STAT 321 Statistics 
-          - MATH42 Abstract Algebra I
+Fall 2022:   STAT-1350 Intro Statistics 
+          -  MATH322 Modern Algebra I
