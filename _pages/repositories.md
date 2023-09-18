@@ -18,7 +18,6 @@ nav_order: 5
 <li> Algebraic Number Theory <a href="../assets/pdf/ant.pdf">[Notes]</a> <br /> </li>
 <li> Homological Algebra <a href="../assets/pdf/hla.pdf">[Notes]</a> <br /> </li>
 <li> Commutative Algebra <a href="../assets/pdf/cc.pdf">[Notes]</a> <br /> </li>
-
 </ul>  
 
 <!-- ## GitHub users
