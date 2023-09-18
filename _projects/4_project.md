@@ -2,7 +2,7 @@
 layout: page
 title: Graph Plotting and Spanning Trees
 description: 
-img:
+img: assets/img/12.jpg
 importance: 4
 category: Data Structures
 ---

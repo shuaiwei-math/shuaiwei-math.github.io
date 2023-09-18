@@ -2,7 +2,7 @@
 layout: page
 title: Trees and Graphs
 description: 
-img: assets/img/3.jpg
+img: assets/img/12.jpg
 importance: 3
 category: Data Structures
 giscus_comments: true

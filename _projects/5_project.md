@@ -2,7 +2,7 @@
 layout: page
 title: Priority Queues
 description: 
-img: assets/img/1.jpg
+img: assets/img/12.jpg
 importance: 5
 category: Data Structures
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: Regular Sequences and Polarization
 description: 
-img: assets/img/12.jpg
+img: assets/img/3.jpg
 redirect: ../assets/pdf/cc_proj1.pdf
 importance: 1
 category: Commutative Algebra
