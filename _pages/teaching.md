@@ -7,7 +7,7 @@ nav: true
 nav_order: 3
 ---
 
-Fall 2023:   MATH-321 Linear Algebra <a href="assets/pdf/aa1.pdf">Notes</a> <br />
+Fall 2023:   MATH-321 Linear Algebra <a href="../assets/pdf/aa1.pdf">Notes</a> <br />
              MATH 327 Discrete Structures  
 
 Spring 2023: MATH-327 Discrete Structures <br /> 
