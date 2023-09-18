@@ -3,7 +3,7 @@ layout: page
 title: project 6
 description: binary trees
 img:
-importance: 4
+importance: 6
 category: ds
 ---
 

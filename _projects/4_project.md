@@ -3,7 +3,7 @@ layout: page
 title: project 4
 description: grap plotting and spanning tress
 img:
-importance: 3
+importance: 4
 category: ds
 ---
 

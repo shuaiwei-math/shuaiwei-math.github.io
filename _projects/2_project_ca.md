@@ -4,7 +4,7 @@ title: project 2
 description: sort
 img: assets/img/12.jpg
 # redirect: ../
-importance: 1
+importance: 2
 category: cc
 related_publications: 
 # related_publications: wei:s, wei:sd
