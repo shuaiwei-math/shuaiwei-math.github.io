@@ -2,7 +2,8 @@
 layout: page
 title: projects
 permalink: /projects/
-description: this module is also being built.
+description: A growing collection of my cool projects.
+
 nav: true
 nav_order: 4
 display_categories: [work, fun]
