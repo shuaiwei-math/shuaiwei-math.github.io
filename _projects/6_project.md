@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Binary Trees
+title: Binary Trees, Evaluations
 description: 
 img: assets/img/12.jpg
 importance: 6

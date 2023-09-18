@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Regular Sequences and Polarization
+title: Regular Sequences, Polarization
 description: 
 img: assets/img/3.jpg
 redirect: ../assets/pdf/cc_proj1.pdf
