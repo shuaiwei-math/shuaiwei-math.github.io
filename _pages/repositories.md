@@ -9,7 +9,7 @@ nav_order: 5
 
 <ul>
 <li> Linear Models in Statistics <a href="../assets/pdf/ls.pdf">[Notes]</a> <br /> </li>
-<li> Probability Essentials, Point Processes, and Martingels <a href="../assets/pdf/pe.pdf">[Notes]</a> <br /> </li>
+<li> Probability Essentials, Point Processes, and Martingales <a href="../assets/pdf/pe.pdf">[Notes]</a> <br /> </li>
 <li> Realiability and Life Test <a href="../assets/pdf/rlt.pdf">[Notes]</a> <br /> </li>
 <li> Functional Analysis <a href="../assets/pdf/fa.pdf">[Notes]</a> <br /> </li>
 <li> Analytic Number Theory and Combinatorics <a href="../assets/pdf/antc.pdf">[Notes]</a> <br /> </li>
