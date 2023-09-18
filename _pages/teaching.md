@@ -10,3 +10,11 @@ nav_order: 5
 For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
 
 Organize your courses by years, topics, or universities, however you like!
+
+Fall 2023 – MATH321 Linear Algebra 
+          - MATH327 Logics
+Spring 2023 – MATH327 Logics  
+            - MATH421 Abstract Algebra II
+          
+Fall 2022 – STAT 321 Statistics 
+          - MATH42 Abstract Algebra I
