@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: sort
+title: Regular Sequences and Polarization
+description: 
 img: assets/img/12.jpg
 redirect: ../assets/pdf/cc_proj1.pdf
 importance: 1

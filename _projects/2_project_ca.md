@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 2
-description: sort
+title: Cohen-Macaulay type and Resolution
+description: 
 img: assets/img/12.jpg
 redirect: ../assets/pdf/cc_proj2.pdf
 importance: 2

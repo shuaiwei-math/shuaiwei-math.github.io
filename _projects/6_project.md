@@ -1,7 +1,7 @@
 ---
 layout: page
 title: project 6
-description: binary trees
+description: Binary Trees
 img:
 importance: 6
 category: Data Structures

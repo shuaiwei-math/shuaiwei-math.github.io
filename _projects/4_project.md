@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 4
-description: grap plotting and spanning tress
+title: Graph Plotting and Spanning Trees
+description: 
 img:
 importance: 4
 category: Data Structures

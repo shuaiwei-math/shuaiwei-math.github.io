@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 2
-description: stack, queuq, and deque
+title: Stack, Queuq, and Deque
+description: 
 img: assets/img/3.jpg
 importance: 2
 category: Data Structures

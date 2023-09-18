@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 3
-description: trees and graphs
+title: Trees and Graphs
+description: 
 img: assets/img/3.jpg
 importance: 3
 category: Data Structures

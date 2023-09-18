@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 5
-description: priority queue
+title: Priority Queues
+description: 
 img: assets/img/1.jpg
 importance: 5
 category: Data Structures
