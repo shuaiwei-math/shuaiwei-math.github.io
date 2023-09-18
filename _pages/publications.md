@@ -1,13 +1,14 @@
 ---
 layout: page
-permalink: /teaching/
+permalink: /publications/
 title: publications
-description: Publications by categories in reversed chronological order.
+description: publications by categories in reversed chronological order.
 nav: true
-nav_order: 5
+nav_order: 1
 ---
+<!-- _pages/publications.md -->
+<div class="publications">
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+{% bibliography -f {{ site.scholar.bibliography }} %}
 
-Organize your courses by years, topics, or universities, however you like!
-
+</div>
