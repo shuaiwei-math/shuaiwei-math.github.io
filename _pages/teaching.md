@@ -7,12 +7,7 @@ nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
-
-Fall 2023:   MATH-321 Linear Algebra <a href="assets/pdf/aa1.
-pdf">AA1</a> <br />
+Fall 2023:   MATH-321 Linear Algebra <a href="assets/pdf/aa1.pdf">AA1</a> <br />
              MATH 327 Discrete Structures  
 
 Spring 2023: MATH-327 Discrete Structures <br /> 
