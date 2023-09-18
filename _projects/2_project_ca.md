@@ -3,7 +3,7 @@ layout: page
 title: project 2
 description: sort
 img: assets/img/12.jpg
-# redirect: ../
+redirect: ../assets/pdf/cc_proj2.pdf
 importance: 2
 category: Commutative Algebra
 related_publications: 
