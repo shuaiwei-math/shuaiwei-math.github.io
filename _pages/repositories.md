@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Materials for courses I took. 
+description: Materials for some courses I took. 
 nav: true
 nav_order: 5
 ---
