@@ -5,7 +5,7 @@ description: a project with a background image
 img: assets/img/12.jpg
 importance: 1
 category: work
-related_publications: wei:s1, wei:s
+related_publications: wei:s1, CMC
 ---
 
 Every project has a beautiful feature showcase page.
