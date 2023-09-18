@@ -17,5 +17,5 @@ Fall 2023:   MATH-321 Linear Algebra <br />
 Spring 2023: MATH-327 Discrete Structures <br /> 
              MATH 421 Modern Algebra II
           
-Fall 2022:   STAT-1350 Intro Statistics 
-          -  MATH322 Modern Algebra I
+Fall 2022:   STAT-1350 Intro Statistics  <br /> 
+             MATH322 Modern Algebra I
