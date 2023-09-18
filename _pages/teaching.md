@@ -4,10 +4,10 @@ permalink: /teaching/
 title: teaching
 description: Materials for courses I taught. 
 nav: true
-nav_order: 5
+nav_order: 3
 ---
 
-Fall 2023:   MATH-321 Linear Algebra <a href="assets/pdf/aa1.pdf">AA1</a> <br />
+Fall 2023:   MATH-321 Linear Algebra <a href="assets/pdf/aa1.pdf">Notes</a> <br />
              MATH 327 Discrete Structures  
 
 Spring 2023: MATH-327 Discrete Structures <br /> 
