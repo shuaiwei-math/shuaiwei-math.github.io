@@ -128,7 +128,7 @@ blog_nav_title: blog # your blog must have a title for it to be displayed in the
 blog_description: The module is being built.
 permalink: /blog/:year/:title/
 
-# Pagination
+# Paginationx
 pagination:
   enabled: true
 
