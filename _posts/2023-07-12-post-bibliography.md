@@ -19,6 +19,4 @@ related_publications:
     \begin{equation}
         \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt,
     \end{equation}
-    which is the prime number theory. The concept map and proof process can be seen from the following link. <br /> 
-    &nbsp; <br /> 
-    <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
+    which is the prime number theory. The concept map and proof process can be seen from: <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
