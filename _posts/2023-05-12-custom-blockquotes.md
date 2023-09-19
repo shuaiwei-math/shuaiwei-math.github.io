@@ -6,7 +6,7 @@ description:
 tags: formatting math
 categories: sample-posts
 giscus_comments: true
-related_posts: true
+related_posts: false
 ---
 
 Monomial ideals provide a foundation for establishing a strong connection between algebra and combinatorics. The introduction to monomial ideals can be found <a href="../../../assets/pdf/mm.pdf">here</a>.
