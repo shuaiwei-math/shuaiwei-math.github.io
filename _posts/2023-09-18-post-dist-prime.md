@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Distributions of Primes
-date: 2023-09-18 07:36:00-0400
+date: 2023-09-18 18:36:00-0400
 description: 
 tags: analysis images
 categories: sample-posts

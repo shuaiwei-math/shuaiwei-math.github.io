@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Generalized Simplicial Complex
-date: 2023-09-18 14:30:00
+date: 2023-09-18 07:30:00
 description:
 tags: algebra
 categories: sample-posts

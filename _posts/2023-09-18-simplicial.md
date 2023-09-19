@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Simplicial Complexes
-date: 2023-09-18 11:14:00-0400
+date: 2023-09-18 07:00:00-0400
 description: 
 tags: algebra
 categories: sample-posts
