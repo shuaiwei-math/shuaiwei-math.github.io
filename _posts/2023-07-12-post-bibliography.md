@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The distributions of primes
+title: Distributions of Primes
 date: 2023-09-18 07:36:00-0400
 description: 
 tags: formatting math

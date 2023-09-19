@@ -1,6 +1,6 @@
 ---
 layout: post
-title: simplicial complex
+title: Simplicial Complexes
 date: 2023-09-18 11:14:00-0400
 description: 
 tags: formatting math

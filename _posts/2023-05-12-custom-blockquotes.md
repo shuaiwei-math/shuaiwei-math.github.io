@@ -1,6 +1,6 @@
 ---
 layout: post
-title: monomial ideals
+title: Monomial Ideals
 date: 2023-09-18 09:33:00-0400
 description: 
 tags: formatting math
