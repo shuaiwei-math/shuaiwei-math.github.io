@@ -13,7 +13,11 @@ related_publications:
 
 Number theory.
     Let 
-    \[\pi_i(x) = \# \{p = x \mid p \text{ is prime}\}. \]
+    $$
+    \pi_i(x) = \# \{p = x \mid p \text{ is prime}\}. 
+    $$
     Then
-    \[\pi(x) \sim \int_2^{x} \frac{1}{ln t}dt.\]
+    $$
+    \pi(x) \sim \int_2^{x} \frac{1}{ln t}dt.
+    $$
 <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
