@@ -11,13 +11,14 @@ related_publications:
 ---
 <!-- This post shows how to add bibliography to simple blog posts. If you would like something more academic, check the [distill style post]({% post_url 2018-12-22-distill %}). -->
 
-Number theory.
     For $$x \in \mathbb N$$,
     \begin{equation}
-        \pi_i(x) = \sharp\, \\{p = x \mid p \text{ is prime}\\}. 
+        \pi(x) = \sharp\, \\{p = x \mid p \text{ is prime}\\}. 
     \end{equation}
     Then
     \begin{equation}
-        \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt.
+        \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt,
     \end{equation}
-<a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
+    which is the prime number theory. The concept map and proof process can be seen from the following link. <br /> 
+    &nbsp; <br /> 
+    <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
