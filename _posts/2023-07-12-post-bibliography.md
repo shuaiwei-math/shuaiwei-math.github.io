@@ -14,7 +14,7 @@ related_publications:
 Number theory.
     For $$x \in \mathbb N$$,
     \begin{equation}
-        \pi_i(x) = \sharp\, \{p = x \mid p \text{ is prime}\}. 
+        \pi_i(x) = \sharp\, \\{p = x \mid p \text{ is prime}\\}. 
     \end{equation}
     Then
     \begin{equation}
