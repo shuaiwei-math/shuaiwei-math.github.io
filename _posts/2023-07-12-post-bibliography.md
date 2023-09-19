@@ -27,11 +27,11 @@ which is the prime number theory. The concept map and proof process can be seen 
 But $$\text{Li}(x)$$ is a better approximation to $$\pi(x)$$ than $$\frac{x}{\ln x}$$ is.
 RH = Riemann Hypothesis (approximately): For any $$\epsilon > 0$$,
 \begin{equation}
-    |\pi(x) - \text{Li}(x)| = O(x^{\frac{1}{2} + \epsilon}).
+    |\pi(x) - \text{Li}(x)| = O\bigl(x^{\frac{1}{2} + \epsilon}\bigr).
 \end{equation}
-More careful analysis shows that $$\text{Li}(x) = \frac{x}{\ln x} + \frac{x}{(\ln x)^{2}} + O(\frac{x}{(\ln x)^{3}})$$. So if RH is true,
+More careful analysis shows that $$\text{Li}(x) = \frac{x}{\ln x} + \frac{x}{(\ln x)^{2}} + O\bigl(\frac{x}{(\ln x)^{3}}\bigr)$$. So if RH is true,
 \begin{equation}
-    |\pi(x)-\frac{x}{\n x}| \sim \frac{x}{(\ln x)^{2}}.
+    |\pi(x)-\frac{x}{\ln x}| \sim \frac{x}{(\ln x)^{2}}.
 \end{equation}
 
     
