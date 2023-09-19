@@ -3,7 +3,7 @@ layout: post
 title: Distributions of Primes
 date: 2023-09-18 07:36:00-0400
 description: 
-tags: formatting math
+tags: analysis image
 categories: sample-posts
 # giscus_comments: true
 related_posts: false
@@ -19,7 +19,7 @@ Then
     \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt \equiv \text{Li}(x),
 \end{equation}
 <!-- Dont use colon !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-which is the prime number theory. The concept map and proof process can be seen from the link: <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>. A little bit work shows then
+which is the prime number theory. The concept map and proof process can be seen from the graph: <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>. A little bit work shows then
 \begin{equation}
     \pi(x) \sim \frac{x}{\ln x}.
 \end{equation}

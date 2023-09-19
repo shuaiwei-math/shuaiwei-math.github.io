@@ -3,7 +3,7 @@ layout: post
 title: Simplicial Complexes
 date: 2023-09-18 11:14:00-0400
 description: 
-tags: formatting math
+tags: algebra
 categories: sample-posts
 giscus_comments: true
 related_posts: false
