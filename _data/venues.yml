@@ -1,9 +1,10 @@
 "JA":
-  url: https://www.sciencedirect.com/journal/journal-of-algebra
+  # url: https://www.sciencedirect.com/journal/journal-of-algebra
+  url: https://arxiv.org/abs/2309.08819
 
 "JAA":
-  url: https://www.worldscientific.com/worldscinet/jaa
-
+  # url: https://www.worldscientific.com/worldscinet/jaa
+  url: https://arxiv.org/abs/2309.02414
 "CUMS": 
   url: https://tigerprints.clemson.edu/all_theses/3173
   color: "#00369f"
