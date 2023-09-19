@@ -17,7 +17,7 @@ For $$x \in \mathbb N$$,
 \end{equation}
 Then 
 \begin{equation}
-    \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt \equiv \text{Li}(x),
+    \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt \equiv \operatername{Li}(x),
 \end{equation}
 <!-- Dont use colon !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 which is the prime number theory. The concept map and proof process can be seen from: <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>. A little bit work shows then
