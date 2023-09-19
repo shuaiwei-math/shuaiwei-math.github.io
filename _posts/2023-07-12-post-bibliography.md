@@ -13,10 +13,12 @@ related_posts: false
 
 For $$x \in \mathbb N$$,
 \begin{equation}
-    \pi(n) = \sharp\, \\{p = n \mid p \text{ is prime}\\}. 
+    \pi(n) = \sharp\, \\{p \leq n \mid p \text{ is prime}\\}. 
 \end{equation}
 Then 
 \begin{equation}
-    \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt = \text{Li}(x),
+    \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt \equiv \text{Li}(x),
 \end{equation}
+
+
     
