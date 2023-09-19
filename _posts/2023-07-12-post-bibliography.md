@@ -13,4 +13,4 @@ related_publications:
 
 Number theory.
 
-<a href="../assets/pdf/conceptMap.pdf">Concept Map</a>
+<a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
