@@ -5,9 +5,9 @@ date: 2023-09-18 07:36:00-0400
 description: 
 tags: formatting math
 categories: sample-posts
-giscus_comments: true
+# giscus_comments: true
 related_posts: false
-related_publications: 
+# related_publications: 
 ---
 <!-- This post shows how to add bibliography to simple blog posts. If you would like something more academic, check the [distill style post]({% post_url 2018-12-22-distill %}). -->
 
