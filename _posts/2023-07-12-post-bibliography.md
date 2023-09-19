@@ -13,7 +13,7 @@ related_publications:
 
     For $$x \in \mathbb N$$,
     \begin{equation}
-        \pi(n) = \sharp\, \\{p \leq n \mid p \text{ is prime}\\}. 
+        \pi(n) = \sharp\, \\{p = n \mid p \text{ is prime}\\}. 
     \end{equation}
     Then 
     \begin{equation}
