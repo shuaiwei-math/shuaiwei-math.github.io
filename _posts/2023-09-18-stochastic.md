@@ -2,7 +2,7 @@
 layout: post
 title: Stochastic Processes
 date: 2023-09-18 13:49:00-0400
-description: an example of a blog post with jupyter notebook
+description: 
 tags: analysis
 categories: sample-posts
 giscus_comments: true
