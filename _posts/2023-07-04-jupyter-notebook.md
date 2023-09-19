@@ -5,7 +5,7 @@ date: 2023-09-18 21:49:00-0400
 description: an example of a blog post with jupyter notebook
 tags: math
 categories: sample-posts
-giscus_comments: true
+# giscus_comments: true
 related_posts: false
 ---
 
