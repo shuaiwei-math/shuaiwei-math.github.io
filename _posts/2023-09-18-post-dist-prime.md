@@ -3,7 +3,7 @@ layout: post
 title: Distributions of Primes
 date: 2023-09-18 07:36:00-0400
 description: 
-tags: analysis image
+tags: analysis images
 categories: sample-posts
 # giscus_comments: true
 related_posts: false
