@@ -1,7 +1,7 @@
 ---
 layout: post
 title: monomial ideals
-date: 2023-09-19 07:53:00-0400
+date: 2023-09-18 09:33:00-0400
 description: 
 tags: formatting math
 categories: sample-posts

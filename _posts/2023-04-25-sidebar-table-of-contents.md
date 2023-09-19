@@ -1,7 +1,7 @@
 ---
 layout: post
 title: simplicial complex
-date: 2023-09-19 08:14:00-0400
+date: 2023-09-18 11:14:00-0400
 description: 
 tags: formatting math
 categories: sample-posts

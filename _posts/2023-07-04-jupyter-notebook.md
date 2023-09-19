@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stochastic Processes
-date: 2023-09-18 21:49:00-0400
+date: 2023-09-18 08:49:00-0400
 description: an example of a blog post with jupyter notebook
 tags: math
 categories: sample-posts
