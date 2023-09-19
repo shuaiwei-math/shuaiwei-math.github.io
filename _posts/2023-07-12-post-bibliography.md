@@ -23,7 +23,7 @@ related_publications:
     \begin{equation}
         \pi(x) \sim \frac{x}{\ln x}.
     \end{equation}
-    But $$\text{Li}(x)$$ is a better approximation to $$\pi(x)$$ than $$\frac{x}{\ln x}$$ is. \par
+    But $$\text{Li}(x)$$ is a better approximation to $$\pi(x)$$ than $$\frac{x}{\ln x}$$ is.
     RH = Riemann Hypothesis (approximately): For any $$\epsilon > 0$$, 
     \begin{equation}
         |\pi(x) - \text{Li}(x)| = O\bigl(x^{\frac{1}{2} + \epsilon}\bigr).
