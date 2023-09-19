@@ -1,8 +1,8 @@
 ---
 layout: post
-title: a post with bibliography
+title: The distributions of primes
 date: 2023-07-12 09:56:00-0400
-description: an example of a blog post with bibliography
+description: 
 tags: formatting bib
 categories: sample-posts
 giscus_comments: true
@@ -13,11 +13,11 @@ related_publications:
 
 Number theory.
     Let 
-    $$
-    \pi_i(x) = \# \{p = x \mid p \text{ is prime}\}. 
-    $$
+    \begin{equation}
+        \pi_i(x) = \# \{p = x \mid p \text{ is prime}\}. 
+    \end{equation}
     Then
-    $$
-    \pi(x) \sim \int_2^{x} \frac{1}{ln t}dt.
-    $$
+    \begin{equation}
+        \pi(x) \sim \int_2^{x} \frac{1}{ln t}dt.
+    \end{euqation}
 <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
