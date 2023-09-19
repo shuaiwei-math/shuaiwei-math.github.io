@@ -12,5 +12,8 @@ related_publications:
 <!-- This post shows how to add bibliography to simple blog posts. If you would like something more academic, check the [distill style post]({% post_url 2018-12-22-distill %}). -->
 
 Number theory.
-
+    Let 
+    \[\pi_i(x) = \# \{p = x \mid p \text{ is prime}\}. \]
+    Then
+    \[\pi(x) \sim \int_2^{x} \frac{1}{ln t}dt.\]
 <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
