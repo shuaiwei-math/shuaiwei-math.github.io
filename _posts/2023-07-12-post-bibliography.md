@@ -13,10 +13,15 @@ related_publications:
 
     For $$x \in \mathbb N$$,
     \begin{equation}
-        \pi(x) = \sharp\, \\{p = x \mid p \text{ is prime}\\}. 
+        \pi(n) = \sharp\, \\{p \leq n \mid p \text{ is prime}\\}. 
     \end{equation}
-    Then
+    Then 
     \begin{equation}
-        \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt,
+    \pi(x) \sim \int_2^{x} \frac{1}{\ln t}dt,
     \end{equation}
-    which is asymptotic law of distribution of prime numbers. The concept map and proof process can be seen from: <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
+    which is the prime number theory. The concept map and proof process can be seen from: <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a> A little bit work shows then
+    \begin{equation}
+    \pi(x) \sim \frac{x}{\ln x}.
+    \end{equation}
+    But Li(x)$ is a better approximation to $\pi(x)$ than $\frac{x}{\log x}$ is.
+   
