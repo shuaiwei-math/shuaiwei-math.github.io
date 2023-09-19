@@ -28,8 +28,8 @@ related_publications:
     \begin{equation}
         |\pi(x) - \text{Li}(x)| = O\bigl(x^{\frac{1}{2} + \epsilon}\bigr).
     \end{equation}
-    More careful analysis shows that $$\text{Li}(x) = \frac{x}{\log x} + \frac{x}{(\log x)^{2}} + O\bigl(\frac{x}{(\log x)^{3}}\bigr)$$. So if RH is true, 
+    More careful analysis shows that $$\text{Li}(x) = \frac{x}{\ln x} + \frac{x}{(\ln x)^{2}} + O\bigl(\frac{x}{(\ln x)^{3}}\bigr)$$. So if RH is true, 
     \begin{equation}
-        |\pi(x)-\frac{x}{\log x}| \sim \frac{x}{(\log x)^{2}}.
+        |\pi(x)-\frac{x}{\n x}| \sim \frac{x}{(\ln x)^{2}}.
     \end{equation}
 \end{fact}
