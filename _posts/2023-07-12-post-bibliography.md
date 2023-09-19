@@ -1,9 +1,9 @@
 ---
 layout: post
 title: The distributions of primes
-date: 2023-07-12 09:56:00-0400
+date: 2023-09-18 07:36:00-0400
 description: 
-tags: formatting bib
+tags: math bib
 categories: sample-posts
 giscus_comments: true
 related_posts: false
@@ -19,5 +19,5 @@ Number theory.
     Then
     \begin{equation}
         \pi(x) \sim \int_2^{x} \frac{1}{ln t}dt.
-    \end{euqation}
+    \end{equation}
 <a href="../../../assets/pdf/conceptMap.pdf">Concept Map</a>
