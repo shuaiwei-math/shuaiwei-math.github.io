@@ -5,7 +5,6 @@ description:
 img: assets/img/12.jpg
 importance: 4
 category: Data Structures
-giscus_comments: true
 
 ---
 
