@@ -6,7 +6,6 @@ img: assets/img/3.jpg
 redirect: ../assets/pdf/cc_proj1.pdf
 importance: 1
 category: Commutative Algebra
-giscus_comments: true
 related_publications: 
 # related_publications: wei:s, wei:sd
 
